@@ -1,0 +1,16 @@
+div {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Times, serif;
+    color:rgb(56, 17, 95);
+}
+
+.myclass{
+    font-size:x-large;
+    color:blueviolet;
+    font-weight: bold;
+}
+
+#myID{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:large;
+    font-style: italic;
+}
