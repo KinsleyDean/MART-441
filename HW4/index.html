@@ -14,10 +14,21 @@
     <h1>Choose Your Own Adventure!</h1>
 
     <div id="story">You wake up in a forest and see two paths. Which path will you take? The right or left?</div>
-    
-    <button id="choice1" onclick="storyFunction1(1);">Left</button>&nbsp;
-    <button id="choice2" onclick="storyFunction2(2);">Right</button>
 
+    <!--text box and button stuff-->
+    <br/>
+    <label id="lblInfo">Input Answer Here</label><br>
+    <input id="txtBox" type="text"><br>
+    <br/>
+    <button id="btnSubmit" onclick="getInfo('You chose');">Submit</button><br>
+
+
+
+
+    
+   <!--old button stuff 
+    <button id="choice1" onclick="storyFunction1(1);">Left</button>&nbsp;
+    <button id="choice2" onclick="storyFunction2(2);">Right</button>-->
     <img id="image1.jpg">
     <img id="image2.jpg" >
     <script src="main.js"></script>
