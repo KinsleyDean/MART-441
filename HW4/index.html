@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Choose Your Own Adventure</title>
     <link rel="stylesheet" href="main.css">
+    <script src= "main.js"> </script>
 </head>
 <body>
    
-    <img src="images/image1.jpg" alt="Forest Image" class="responsive-image">
+    <img id= "photo" src="images/image1.jpg" alt="Forest Image" class="responsive-image">
 
     <h1>Choose Your Own Adventure!</h1>
 
@@ -20,17 +21,14 @@
     <label id="lblInfo">Input Answer Here</label><br>
     <input id="txtBox" type="text"><br>
     <br/>
-    <button id="btnSubmit" onclick="getInfo('You chose');">Submit</button><br>
+    <button id="btnSubmit" onclick="storyFunction2(),storyFunction1()">Submit</button>
+   <br/>
+    <!--Restart button-->
+    <button id="restart" onclick="restart();">Restart</button>
+    <div id="myName"></div>
+   
 
-
-
-
-    
-   <!--old button stuff 
-    <button id="choice1" onclick="storyFunction1(1);">Left</button>&nbsp;
-    <button id="choice2" onclick="storyFunction2(2);">Right</button>-->
-    <img id="image1.jpg">
-    <img id="image2.jpg" >
-    <script src="main.js"></script>
 </body>
+<script> theForLoop()
+</script>
 </html>
