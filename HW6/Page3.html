@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>
+        Memory Matching!
+    </title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body onload="getInformation();">
+    <h1>Memory Matching</h1>
+
+    <div class="divTable">
+        <div class="divTableBody">
+            <div class="divTableRow">
+                <div class="divTableCell">
+                    <div id="endInformation"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function getInformation() {
+            //  player information from localStorage
+            var information = localStorage.getItem("information");
+
+            // Parse the stored JSON data
+            if (information) {
+                var parsedInfo = JSON.parse(information);
+
+                // Display the player's name, last name, and age
+                document.getElementById("endInformation").innerHTML =
+                    "<h3>Player Information:</h3>" +
+                    "<p>Name: " + parsedInfo.Name + " " + parsedInfo.LastName + "</p>" +
+                    "<p>Age: " + parsedInfo.Age + "</p>";
+            }
+        }
+
+        function goNextPage() {
+            window.location = "Page1.html";  // Restart the game
+        }
+    </script>
+
+    <br>
+    <button id="btnSubmit" onclick="goNextPage();">Restart?</button>
+
+</body>
+
+</html>

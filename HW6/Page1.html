@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Memory Matching</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<script>
+    function setInformation() {
+        var firstName = document.getElementById("txtFirstName").value;
+        var lastName = document.getElementById("txtLastName").value;
+        var age = document.getElementById("txtAge").value;
+        
+        var information = {"Name": firstName, "LastName": lastName, "Age": age};
+        localStorage.setItem("information", JSON.stringify(information));
+        
+        // Now update the display
+        document.getElementById("info").innerHTML = "Name: " + information.Name + ", Last Name: " + information.LastName + ", Age: " + information.Age;
+    }
+
+    function getInformation() {
+        var savedInformation = JSON.parse(localStorage.getItem("information"));
+        if (savedInformation) {
+            document.getElementById("info").innerHTML = savedInformation.Name + ": " + savedInformation.LastName + ": " + savedInformation.Age;
+        }
+    }
+
+    function goNextPage() {
+        window.location = "index.html";
+    }
+</script>
+
+<body onload="getInformation();">
+    <h1>Memory Matching</h1>
+
+    <div class="divTable">
+        <div class="divTableBody">
+            <div class="divTableRow">
+                <div class="divTableCell">First Name</div>
+                <div class="divTableCell"><input type="text" id="txtFirstName"></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">Last Name</div>
+                <div class="divTableCell"><input type="text" id="txtLastName"></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">Age</div>
+                <div class="divTableCell"><input type="text" id="txtAge"></div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell"><button id="btnSubmit" onclick="setInformation();">Submit</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="info"></div>
+    <br>
+    <button id="btnSubmit" onclick="goNextPage();">Go to Game</button>
+</body>
+</html>
