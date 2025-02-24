@@ -11,6 +11,7 @@ var score = 0;
 var allFound = 0;
 // JSON declaration
 var player = {"firstname":"", "lastname":"", "age":0, "score":0};
+var savedInformation = JSON.parse(localStorage.getItem("information"));
 
 // create a variable with the blank image name
 // create a empty array for the actual images
@@ -78,13 +79,13 @@ function flipImage(number)
     if(firstNumber >= 0)
     {
         secondNumber = number;
-        document.getElementById(imageNames[number]).src = actualImages[secondNumber];
+        document.getElementById(imageTags[number]).src = actualImages[secondNumber];
         
     }
     else if(firstNumber < 0) // make the first image appear
     {
         firstNumber = number;
-        document.getElementById(imageNames[firstNumber]).src= actualImages[firstNumber];
+        document.getElementById(imageTags[firstNumber]).src= actualImages[firstNumber];
     
     }
     // check to see if the images do not match
@@ -103,6 +104,7 @@ function flipImage(number)
         secondNumber = -1;
         if(allFound == actualImages.length/2)
         {  
+            console.log(score)
             player.score = score;
             localStorage.setItem("playerInfo", JSON.stringify(player));
             window.location = "Page3.html";
@@ -114,8 +116,8 @@ function imagesDisappear()
 {
 
     console.log(firstNumber);
-    document.getElementById(imageNames[firstNumber]).src = blankImagePath;
-    document.getElementById(imageNames[secondNumber]).src = blankImagePath;
+    document.getElementById(imageTags[firstNumber]).src = blankImagePath;
+    document.getElementById(imageTags[secondNumber]).src = blankImagePath;
     firstNumber = -1;
     secondNumber = -1;
 }

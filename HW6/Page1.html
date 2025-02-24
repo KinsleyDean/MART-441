@@ -10,12 +10,13 @@
         var firstName = document.getElementById("txtFirstName").value;
         var lastName = document.getElementById("txtLastName").value;
         var age = document.getElementById("txtAge").value;
+        var score = 0
         
-        var information = {"Name": firstName, "LastName": lastName, "Age": age};
+        var information = {"Name": firstName, "LastName": lastName, "Age": age, "score": score};
         localStorage.setItem("information", JSON.stringify(information));
         
         // Now update the display
-        document.getElementById("info").innerHTML = "Name: " + information.Name + ", Last Name: " + information.LastName + ", Age: " + information.Age;
+        document.getElementById("info").innerHTML = "Name: " + information.Name + ", Last Name: " + information.LastName + ", Age: " + information.Age + "score" + information.score;
     }
 
     function getInformation() {

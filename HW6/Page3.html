@@ -25,16 +25,18 @@
         function getInformation() {
             //  player information from localStorage
             var information = localStorage.getItem("information");
-
+            var playerInfo = localStorage.getItem ("playerInfo");
             // Parse the stored JSON data
             if (information) {
                 var parsedInfo = JSON.parse(information);
-
+                var scoreInfo = JSON.parse(playerInfo);
                 // Display the player's name, last name, and age
+                console.log(parsedInfo.score)
                 document.getElementById("endInformation").innerHTML =
                     "<h3>Player Information:</h3>" +
                     "<p>Name: " + parsedInfo.Name + " " + parsedInfo.LastName + "</p>" +
-                    "<p>Age: " + parsedInfo.Age + "</p>";
+                    "<p>Age: " + parsedInfo.Age + "</p>" +
+                    "<p>Score: " + scoreInfo.score; 
             }
         }
 
