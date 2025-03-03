@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Master</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body onload="initializeArray(); accessInformation();">
+    <h1>View Master</h1>
+
+    <!-- Image Gallery with unique ids -->
+    <div class="images">
+        <img src="images/Book1.jpg" id="Book1" onclick="imagesDisappear()">
+    </div>
+    <div class="images">
+        <img src="images/Book2.jpg" id="Book2" onclick="imagesDisappear()">
+    </div>
+    <div class="images">
+        <img src="images/Book3.jpg" id="Book3" onclick="imagesDisappear()">
+    </div>
+    <div class="images">
+        <img src="images/Book4.jpg" id="Book4" onclick="imagesDisappear()">
+    </div>
+    <div class="images">
+        <img src="images/Book5.jpg" id="Book5" onclick="imagesDisappear()">
+    </div>
+
+    <div id="title"></div>
+    <button id="btnSubmit" onclick="accessInformation();">Advance</button>
+
+</body>
+</html>
