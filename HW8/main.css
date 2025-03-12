@@ -2,9 +2,6 @@ body{
     background-color:rgb(141, 109, 175);
 }
 
-b {
-	font-size: 20px;
-  }
 
 .center {
 	text-align: center;
@@ -62,6 +59,23 @@ b {
 	position: absolute;
 	right:100;
 	bottom: 00;
+  }
+
+  #text1{
+	position:absolute;
+	right:200;
+	left:100;
+  }
+
+  #text2{
+	position:absolute;
+	right:400;
+	left:200;
+  }
+  #text3{
+	position:absolute;
+	right:300;
+	left:00;
   }
   img {
 	border: 1px solid #ddd;

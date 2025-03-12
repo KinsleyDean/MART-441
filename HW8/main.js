@@ -1,5 +1,63 @@
 
+function moveSquare()
+{
+    $("#square").fadeIn("slow").animate({right:250}).animate({bottom:400}).animate({left:250}).animate({top:400}).fadeOut("slow");
+    $("#square2").fadeIn("slow").animate({left:250}).animate({top:400}).animate({right:250}).animate({bottom:400}).fadeOut("slow");
+    $("#square3").fadeIn("slow").animate({top:400}).animate({bottom:400}).fadeOut("slow");
+}
 
+$(document).ready(function () {
+    $('#text1').hide();
+    $('#text2').hide();
+    $('#text3').hide();
+    $("#image1").hide();
+    $("#image2").hide();
+    $("#image3").hide();
+    $("#square").hide();
+    $("#square2").hide();
+    $("#square3").hide();
+});
+//?????? is my arrays correct?
+var myArray1 = new Array('#image1', '#text1');
+    var myArray2 = new Array('#image2', '#text2');
+    var myArray3 = new Array('#image3', '#text3');
+    var myArray = new Array();
+    myArray.push(myArray1);
+    myArray.push(myArray2);
+    myArray.push(myArray3);
+    
+
+$(document).ready(function () {
+    $("button").click(function () {
+       $('#text1').fadeIn("slow").animate({right:250}).animate({left:250});
+       $("#image1").fadeIn("slow").fadeOut("slow").fadeToggle();
+       $("#image2").fadeIn("slow").fadeOut("slow").fadeToggle();   
+       $("#image3").fadeIn("slow").fadeOut("slow").fadeToggle();  
+       moveSquare()
+});
+})
+
+$(document).ready(function () {
+    $("button").click(function () {
+        
+        $('#text2').fadeIn("slow").animate({right:250}).animate({left:250});
+       
+    });
+})
+
+$(document).ready(function () {
+    $("button").click(function () {
+        $('#text3').fadeIn("slow").animate({right:250}).animate({left:250});
+         
+    });
+})
+
+
+
+
+
+
+/*
 class ViewFinder
 {
     constructor(Image, Description, Shape)
@@ -22,10 +80,6 @@ class ViewFinder
     str = `<img src=  ${this.Image} ><br>Description: ${this.Description}`;
     return str;
     }
-
-
-
-/*
 //
     get theImage()
     {
@@ -64,51 +118,9 @@ function accessInformation()
     console.log(randomNumber)
     document.getElementById("title").innerHTML = myViewFinderArray[randomNumber].toString();
 
+}
 }*/
-}
-function moveSquare()
-{
-    $("#square").fadeIn("slow").animate({right:250}).animate({bottom:400}).animate({left:250}).animate({top:400}).fadeOut("slow");
-    $("#square2").fadeIn("slow").animate({left:250}).animate({top:400}).animate({right:250}).animate({bottom:400}).fadeOut("slow");
-    $("#square3").fadeIn("slow").animate({top:400}).animate({bottom:400}).fadeOut("slow");
-}
 
-$(document).ready(function () {
-    $('h1').hide();
-    $('b').hide();
-    $('p').hide();
-    $("#image1").hide();
-    $("#image2").hide();
-    $("#image3").hide();
-    $("#square").hide();
-    $("#square2").hide();
-    $("#square3").hide();
-});
-//why is it not hiding the images at first, but does for the text and squares?
-
-//I dont understand how to use arrays to make certain images and text pop up, or how to make my text get bigger and smaller.
-
-$(document).ready(function () {
-    $("button").click(function () {
-       $('h1').fadeIn("slow").css({'font-size' : '5px'}).css({'font-size' : '20px'});
-       $("#image1").fadeIn("slow").fadeOut("slow").fadeToggle();
-       moveSquare()
-});
-})
-
-$(document).ready(function () {
-    $("button").click(function () {
-        $('b').fadeIn("slow").css({'font-size' : '5px'}).css({'font-size' : '20px'});
-        $("#image2").fadeIn("slow").fadeOut("slow").fadeToggle();   
-    });
-})
-
-$(document).ready(function () {
-    $("button").click(function () {
-        $('p').fadeIn("slow").css({'font-size' : '5px'}).css({'font-size' : '20px'});
-        $("#image3").fadeIn("slow").fadeOut("slow").fadeToggle();   
-    });
-})
 
 
 
@@ -119,7 +131,7 @@ $(document).ready(function () {
 
 
 //
-/*   
+/*  
 }
 var imageTags = ["image1, image2, image3"]
 var myViewFinderArray = new Array();
@@ -138,7 +150,7 @@ function initializeArray()
     myViewFinderArray.push(myViewFinder2);
     myViewFinderArray.push(myViewFinder3);
    
-}*/
+}
 
 //????TRYING FOR IMAGES HERE????????????
 
