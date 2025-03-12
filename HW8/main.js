@@ -30,9 +30,9 @@ var myArray1 = new Array('#image1', '#text1','#square');
 $(document).ready(function () {
     $("button").click(function () {
        $('#text1').fadeIn("slow").animate({right:250}).animate({left:250});
-       $("#image1").fadeIn("slow").fadeOut("slow").fadeToggle();
-       $("#image2").fadeIn("slow").fadeOut("slow").fadeToggle();   
-       $("#image3").fadeIn("slow").fadeOut("slow").fadeToggle();  
+       $("#image1").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:100}).animate({top:250});
+       $("#image2").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:700}).animate({top:250});   
+       $("#image3").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:1000}).animate({top:250});  
        moveSquare()
 });
 })

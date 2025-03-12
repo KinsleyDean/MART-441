@@ -77,6 +77,26 @@ body{
 	right:300;
 	left:00;
   }
+
+  #image1{
+	position: absolute;
+	left:500;
+	bottom: 100;
+  }
+
+  #image2{
+	position: absolute;
+	left:100;
+	bottom: 100;
+  }
+
+  #image3{
+	position: absolute;
+	left:00;
+	bottom: 100;
+  }
+
+
   img {
 	border: 1px solid #ddd;
 	border-radius: 4px;
