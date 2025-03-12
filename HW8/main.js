@@ -18,9 +18,9 @@ $(document).ready(function () {
     $("#square3").hide();
 });
 //?????? is my arrays correct?
-var myArray1 = new Array('#image1', '#text1');
-    var myArray2 = new Array('#image2', '#text2');
-    var myArray3 = new Array('#image3', '#text3');
+var myArray1 = new Array('#image1', '#text1','#square');
+    var myArray2 = new Array('#image2', '#text2','#square2');
+    var myArray3 = new Array('#image3', '#text3','#square3');
     var myArray = new Array();
     myArray.push(myArray1);
     myArray.push(myArray2);
