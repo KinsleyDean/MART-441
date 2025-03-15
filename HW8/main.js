@@ -17,42 +17,29 @@ $(document).ready(function () {
     $("#square2").hide();
     $("#square3").hide();
 });
-//?????? is my arrays correct?
-var myArray1 = new Array('#image1', '#text1','#square');
-    var myArray2 = new Array('#image2', '#text2','#square2');
-    var myArray3 = new Array('#image3', '#text3','#square3');
-    var myArray = new Array();
-    myArray.push(myArray1);
-    myArray.push(myArray2);
-    myArray.push(myArray3);
-    
+
+var myArray1 = new Array('#text1', '#text2','#text3');
+var myArray2 = new Array('#image1', '#image2','#image3');
+var myArray3 = new Array('#square', '#square2','#square3');
 
 $(document).ready(function () {
-    $("button").click(function () {
-       $('#text1').fadeIn("slow").animate({right:250}).animate({left:250});
-       $("#image1").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:100}).animate({top:250});
-       $("#image2").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:700}).animate({top:250});   
-       $("#image3").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:1000}).animate({top:250});  
-       moveSquare()
+$("button").click(function () {
+$(myArray2[0]).fadeIn("slow").animate({right:250}).animate({left:250});
+$("#image1").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:100}).animate({top:250});
+$("#image2").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:700}).animate({top:250});
+$("#image3").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:1000}).animate({top:250});
+moveSquare()
 });
 })
 
 $(document).ready(function () {
     $("button").click(function () {
-        
-        $('#text2').fadeIn("slow").animate({right:250}).animate({left:250});
-       
-    });
+    $(myArray1[0]).fadeIn("slow").animate({right:250}).animate({left:250});
+    $('#text1').fadeIn("slow").animate({right:250}).animate({left:250});
+    $('#text2').fadeIn("slow").animate({right:250}).animate({left:250});
+    $('#text3').fadeIn("slow").animate({right:250}).animate({left:250});
+});
 })
-
-$(document).ready(function () {
-    $("button").click(function () {
-        $('#text3').fadeIn("slow").animate({right:250}).animate({left:250});
-         
-    });
-})
-
-
 
 
 
