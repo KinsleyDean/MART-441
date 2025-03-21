@@ -1,16 +1,9 @@
-var myArray1 = new Array('#text1', '#text2','#text3');
-var myArray2 = new Array('#image1', '#image2','#image3');
-var myArray3 = new Array('#square', '#square2','#square3');
 
 function moveSquare()
 {
-    $(myArray3[0]).fadeIn("slow").animate({right:250}).animate({bottom:400}).animate({left:250}).animate({top:400}).fadeOut("slow");
-    $(myArray3[1]).fadeIn("slow").animate({right:250}).animate({bottom:400}).animate({left:250}).animate({top:400}).fadeOut("slow");
-    $(myArray3[2]).fadeIn("slow").animate({right:250}).animate({bottom:400}).animate({left:250}).animate({top:400}).fadeOut("slow");
-
-//    $("#square").fadeIn("slow").animate({right:250}).animate({bottom:400}).animate({left:250}).animate({top:400}).fadeOut("slow");
-//    $("#square2").fadeIn("slow").animate({left:250}).animate({top:400}).animate({right:250}).animate({bottom:400}).fadeOut("slow");
- //   $("#square3").fadeIn("slow").animate({top:400}).animate({bottom:400}).fadeOut("slow");
+    $("#square").fadeIn("slow").animate({right:250}).animate({bottom:400}).animate({left:250}).animate({top:400}).fadeOut("slow");
+    $("#square2").fadeIn("slow").animate({left:250}).animate({top:400}).animate({right:250}).animate({bottom:400}).fadeOut("slow");
+    $("#square3").fadeIn("slow").animate({top:400}).animate({bottom:400}).fadeOut("slow");
 }
 
 $(document).ready(function () {
@@ -25,32 +18,26 @@ $(document).ready(function () {
     $("#square3").hide();
 });
 
+var myArray1 = new Array('#text1', '#text2','#text3');
+var myArray2 = new Array('#image1', '#image2','#image3');
+var myArray3 = new Array('#square', '#square2','#square3');
 
 $(document).ready(function () {
 $("button").click(function () {
-// move the images
-$(myArray2[0]).fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:100}).animate({top:250});
-$(myArray2[1]).fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:700}).animate({top:250});
-$(myArray2[2]).fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:500}).animate({top:250});
-
-//$("#image1").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:100}).animate({top:250});
-//$("#image2").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:700}).animate({top:250});
-//$("#image3").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:1000}).animate({top:250});
+$(myArray2[0]).fadeIn("slow").animate({right:250}).animate({left:250});
+$("#image1").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:100}).animate({top:250});
+$("#image2").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:700}).animate({top:250});
+$("#image3").fadeIn("slow").fadeOut("slow").fadeToggle().animate({right:1000}).animate({top:250});
 moveSquare()
 });
 })
 
 $(document).ready(function () {
     $("button").click(function () {
-
-        // move the text
     $(myArray1[0]).fadeIn("slow").animate({right:250}).animate({left:250});
-    $(myArray1[1]).fadeIn("slow").animate({right:250}).animate({left:250});
-    $(myArray1[2]).fadeIn("slow").animate({right:250}).animate({left:250});
-  
-    // $('#text1').fadeIn("slow").animate({right:250}).animate({left:250});
-   // $('#text2').fadeIn("slow").animate({right:250}).animate({left:250});
-   // $('#text3').fadeIn("slow").animate({right:250}).animate({left:250});
+    $('#text1').fadeIn("slow").animate({right:250}).animate({left:250});
+    $('#text2').fadeIn("slow").animate({right:250}).animate({left:250});
+    $('#text3').fadeIn("slow").animate({right:250}).animate({left:250});
 });
 })
 
