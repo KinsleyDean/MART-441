@@ -6,14 +6,26 @@ $(document).ready(function () {
     });
 });
 
-/*let food = {
-    "Food" : "Bread",
-    "alergen" : "Gluten",
-    "country" : [
-        "France",
-        "United Kingdom",
-    ]
-}*/
+
+//"background-color", "blue");
+
+(function($){
+    $.fn.rainbow = function () {
+        this.css("background", "linear-gradient(in hsl longer hue 45deg, red 0 100%)");
+        this.css("color", "black");
+        this.css("font-size", 50);
+        return this;
+    };
+    }(jQuery));
+    $(function () {
+        $("button").click(function () {
+            $("#foodInformation").rainbow().fadeOut("slow").fadeIn("slow");
+        });
+
+    });
+
+
+
 
 function showFoodInformation(){
     $.getJSON("data/foodInfo.json", function(result){
