@@ -13,20 +13,20 @@ drawSquare();
 //moves big square
 setInterval(moveRedSquare, 5000);
 
-// refresh
+// 
 function createSquares() {
     square1 = new Square(x, y, 50, 50, "purple");
     square2 = new Square(x2, y2, 100, 100, "red");
 }
 
-//  // random second square movement
+//  // 
 function moveRedSquare() {
 
     square2.setX(Math.floor(Math.random() * canvas.width));
     square2.setY(Math.floor(Math.random() * canvas.height));
     drawSquare();
 }
-//  // draws the sqaures
+//  // 
 function drawSquare() {
     ctx.clearRect(0, 0, 800, 600);
     ctx.fillStyle = square1.theColor;
@@ -43,10 +43,10 @@ $(document).ready(function () {
     });
 });
 
-// checks which key is pressed
+// 
 function getKey(event) {
 
-  //  // only checking collision when a key is pressed
+  //  //
     var didCollide = hasCollided(square1, square2);
     // if a collision happens
     if (didCollide) {
@@ -78,7 +78,7 @@ if(!didCollide)
 
 
 
-    // move small square with key press
+    // 
     var char = event.which || event.keyCode;
     var actualLetter = String.fromCharCode(char);
     if (actualLetter == "w") {
@@ -110,7 +110,7 @@ function moveRight() {
     square1.setX(square1.theX + 10);
 }
 
-//  // this is a basic collision function that checks for corners overlapping
+//  // 
 function hasCollided(object1, object2) {
     return !(
         ((object1.y + object1.height) < (object2.y)) ||
