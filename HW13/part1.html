@@ -138,7 +138,7 @@ player = this.physics.add.sprite(100, 450, 'dude');
             player.anims.play('turn');
         }
 
-        if (cursors.up.isDown && player.body.touching.down)
+        if (cursors.spacebar.isDown && player.body.touching.down)
         {
             player.setVelocityY(-330);
         }
