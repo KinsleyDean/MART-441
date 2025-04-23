@@ -131,7 +131,7 @@ this.physics.add.collider(player, spikes, hitSpike, null, this);
     //  Some stars to collect, 12 in total, evenly spaced 70 pixels apart along the x axis
     stars = this.physics.add.group({
         key: 'star',
-        repeat: 8,
+        repeat: 5,
         setXY: {
             x: 10,
             y: 0,
@@ -257,12 +257,13 @@ function collectStar(player, star) {
     scoreText.setText('Score: ' + score);
 
     // Only do this if ALL stars AND apples are collected
-    
-    if (stars.countActive(true) === 0) {
+    console.log(stars.countActive(true) + ":" + apples.countActive(true));
+    if (stars.countActive(true) === 0 && apples.countActive(true) === 0) {
         level += 1;
         levelText.setText('Level: ' + level);
         stars.children.iterate(function (child) {
             child.enableBody(true, Phaser.Math.Between(50, 750), 0, true, true);
+            console.log("HI");
         });
 
         apples.children.iterate(function (child) {
@@ -286,15 +287,15 @@ function collectApple(player, apple) {
     apple.disableBody(true, true);
     health += 1;
     healthText.setText('Health: ' + health);
-
+    console.log(stars.countActive(true) + ":" + apples.countActive(true));
     // Check if all items are collected, then respawn
-   /* if (stars.countActive(true) === 0 ) {
-        //respawnItems.call(this);
+    if (apples.countActive(true) === 0 && stars.countActive(true) === 0 ) {
+        respawnItems.call(this);
         child.enableBody(true, child.x, 0, true, true);
 
         };
 
-        var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
+       /* var x = (player.x < 400) ? Phaser.Math.Between(400, 800) : Phaser.Math.Between(0, 400);
 
         var bomb = bombs.create(x, 16, 'bomb');
         bomb.setBounce(1);
